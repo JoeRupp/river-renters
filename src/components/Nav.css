@@ -21,6 +21,9 @@
 }
 
 .btn {
+  font-family: basic-sans, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
   height: 15vh;
   width: 12vw;
   border: 0;
@@ -32,6 +35,9 @@
 }
 
 .btnActive {
+  font-family: basic-sans, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
   height: 15vh;
   width: 12vw;
   border: 0;
