@@ -6,12 +6,14 @@ function RentARig({ allRigs }) {
   const availableRigsList = allRigs.map((rig) => {
     return (
       <RigCard
-        key={rig.id}
+        id={rig.id}
         name={rig.name}
         brand={rig.brand}
         type={rig.type}
         cost={rig.cost}
         description={rig.discription}
+        photo={rig.photoId}
+        key={rig.id}
       />
     );
   });
@@ -48,7 +50,7 @@ function RentARig({ allRigs }) {
           </select>
         </div>
       </div>
-      <div className="availableRentals"></div>
+      <div className="availableRentals">{availableRigsList}</div>
     </section>
   );
 }
