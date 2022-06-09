@@ -1,7 +1,7 @@
 import React from "react";
 
-function RigPreview() {
+function RigCard() {
   return <section>{/* <h1>Rig Preview</h1> */}</section>;
 }
 
-export default RigPreview;
+export default RigCard;

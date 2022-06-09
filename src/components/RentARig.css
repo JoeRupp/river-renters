@@ -1,0 +1,46 @@
+.rentARigSection {
+  padding: 5%;
+}
+
+h1 {
+  font-family: basic-sans, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  color: #22AEF4;
+  margin: 0;
+}
+
+.form {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  color: grey;
+}
+
+select {
+  border-color: transparent;
+  width: 20%;
+}
+
+.rentalInfo {
+  width: 50%;
+}
+
+.rentalNav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.availableRentals{
+  height: 70vh;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
