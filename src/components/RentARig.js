@@ -2,19 +2,19 @@ import React from "react";
 import "./RentARig.css";
 import RigCard from "./RigCard";
 
-function RentARig() {
-  // const availableRigsList = availableRigs.map((rig) => {
-  //   return (
-  //     <RigCard
-  //       key={rig.id}
-  //       name={rig.name}
-  //       brand={rig.brand}
-  //       type={rig.type}
-  //       cost={rig.cost}
-  //       description={rig.discription}
-  //     />
-  //   );
-  // });
+function RentARig({ allRigs }) {
+  const availableRigsList = allRigs.map((rig) => {
+    return (
+      <RigCard
+        key={rig.id}
+        name={rig.name}
+        brand={rig.brand}
+        type={rig.type}
+        cost={rig.cost}
+        description={rig.discription}
+      />
+    );
+  });
 
   return (
     <section className="rentARigSection">
