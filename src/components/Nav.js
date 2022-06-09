@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
+  const [rentARigStatus, updateRentARigStatus] = useState(false);
+  const [yourRentalsStatus, updateRentalStatus] = useState(false);
+
   return (
     <nav className="navigationBar">
       <img
@@ -10,16 +13,26 @@ function Nav() {
         src={require("../assets/logos/RiverRenters-logo.png")}
         alt="River Renters Logo"
       />
-      <NavLink to={"/"}>
-        <button className="btn" activeClassName="selectedBtn">
-          RENT A RIG
-        </button>
-      </NavLink>
-      <NavLink to={"/your-rentals"}>
-        <button className="btn" activeClassName="selectedBtn">
-          YOUR RENTALS
-        </button>
-      </NavLink>
+      <div className="btnContainer">
+        <NavLink
+          exact
+          to={"/"}
+          className={(isActive) => updateRentARigStatus(isActive)}
+        >
+          <button className={rentARigStatus ? "btnActive" : "btn"}>
+            RENT A RIG
+          </button>
+        </NavLink>
+        <NavLink
+          exact
+          to={"/your-rentals"}
+          className={(isActive) => updateRentalStatus(isActive)}
+        >
+          <button className={yourRentalsStatus ? "btnActive" : "btn"}>
+            YOUR RENTALS
+          </button>
+        </NavLink>
+      </div>
     </nav>
   );
 }

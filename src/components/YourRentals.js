@@ -1,11 +1,7 @@
 import React from "react";
 
 function YourRentals() {
-  return (
-    <section>
-      <h1>Your Rentals</h1>
-    </section>
-  );
+  return <section></section>;
 }
 
 export default YourRentals;
