@@ -4,18 +4,20 @@ import RigCard from "./RigCard";
 
 function RentARig({ allRigs }) {
   const availableRigsList = allRigs.map((rig) => {
-    return (
-      <RigCard
-        id={rig.id}
-        name={rig.name}
-        brand={rig.brand}
-        type={rig.type}
-        cost={rig.cost}
-        description={rig.discription}
-        photo={rig.photoId}
-        key={rig.id}
-      />
-    );
+    if (rig.status === "available") {
+      return (
+        <RigCard
+          id={rig.id}
+          name={rig.name}
+          brand={rig.brand}
+          type={rig.type}
+          cost={rig.cost}
+          description={rig.description}
+          photo={rig.photoId}
+          key={rig.id}
+        />
+      );
+    }
   });
 
   return (

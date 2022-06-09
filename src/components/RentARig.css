@@ -35,12 +35,14 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .availableRentals{
-  height: 70vh;
-  overflow-y: scroll;
+  width: 90vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
 }

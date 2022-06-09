@@ -1,0 +1,39 @@
+.rigCard {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 5%;
+}
+
+.rigCard:hover {
+  box-shadow: rgba(34, 174, 244, 0.25) 0px 30px 60px -12px, rgba(34, 174, 244, 0.3) 0px 18px 36px -18px;
+}
+
+.cardImage {
+  height: 70%;
+  margin: 5%;
+}
+
+.cardDetails {
+  height: 80%;
+  margin: 5%;
+}
+
+h2 {
+  font-family: basic-sans, sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: #22AEF4;
+  margin: 0;
+}
+
+h3 {
+  font-family: basic-sans, sans-serif;
+  font-weight: 700;
+  color: gray;
+  margin: 0;
+}
