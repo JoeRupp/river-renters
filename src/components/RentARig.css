@@ -10,8 +10,20 @@ h1 {
   margin: 0;
 }
 
+.form {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 p {
   color: grey;
+}
+
+select {
+  border-color: transparent;
+  width: 20%;
 }
 
 .rentalInfo {

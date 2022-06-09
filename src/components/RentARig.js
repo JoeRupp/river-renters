@@ -1,37 +1,50 @@
 import React from "react";
 import "./RentARig.css";
+import RigCard from "./RigCard";
 
 function RentARig() {
+  // const availableRigsList = availableRigs.map((rig) => {
+  //   return (
+  //     <RigCard
+  //       key={rig.id}
+  //       name={rig.name}
+  //       brand={rig.brand}
+  //       type={rig.type}
+  //       cost={rig.cost}
+  //       description={rig.discription}
+  //     />
+  //   );
+  // });
+
   return (
     <section className="rentARigSection">
       <h1>RENT A RIG</h1>
       <div className="rentalNav">
         <div className="rentalInfo">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            All our available rafting rig setups are listed below. Click on any
+            of the to learn more and rent it.
           </p>
         </div>
         <div className="form">
-          <p>price:</p>
+          <p>filter by:</p>
           <select>
-            <option>All</option>
+            <option>brand</option>
             <option>option2</option>
             <option>option3</option>
+            <option>option4</option>
           </select>
-          <p>brand:</p>
           <select>
-            <option>All</option>
+            <option>type</option>
             <option>option2</option>
             <option>option3</option>
+            <option>option4</option>
           </select>
-          <p>type:</p>
           <select>
-            <option>All</option>
+            <option>price</option>
             <option>option2</option>
             <option>option3</option>
+            <option>option4</option>
           </select>
         </div>
       </div>
