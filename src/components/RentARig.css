@@ -22,8 +22,8 @@ p {
 }
 
 select {
-  border-color: transparent;
-  width: 20%;
+  border-color: rgb(200, 200, 200);
+  width: 25%;
 }
 
 .rentalInfo {
@@ -36,6 +36,19 @@ select {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5%;
+}
+
+.filterBtn {
+  background-color: white;
+  border-color: #22AEF4;
+  border-style: solid;
+  width: 15%;
+  border-radius: 5px;
+}
+
+.filterBtn:hover {
+  background-color: #22AEF4;
+  color: white;
 }
 
 .availableRentals{

@@ -13,7 +13,7 @@ function RigCard({ id, name, brand, type, cost, description, photo }) {
         <div className="cardDetails">
           <h2>{name}</h2>
           <p>{`${brand} | ${type}`}</p>
-          <h3>{cost}</h3>
+          <h3>{`$${cost} per day`}</h3>
         </div>
       </section>
     </Link>

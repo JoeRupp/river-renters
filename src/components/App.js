@@ -10,11 +10,27 @@ import allBoats from "../testData";
 function App() {
   const [allBoatData, setAllBoatData] = useState(allBoats.rigs);
 
+  const availableRigs = allBoatData.filter((rig) => {
+    return rig.status === "available";
+  });
+
+  const rentedRigs = allBoatData.filter((rig) => {
+    return rig.status === "rented";
+  });
+
   return (
     <main>
       <Nav />
-      <Route exact path="/" render={() => <Home allRigs={allBoatData} />} />
-      <Route exact path="/your-rentals" render={() => <YourRentals />} />
+      <Route
+        exact
+        path="/"
+        render={() => <Home availableRigs={availableRigs} />}
+      />
+      <Route
+        exact
+        path="/your-rentals"
+        render={() => <YourRentals rentedRigs={rentedRigs} />}
+      />
       <Route exact path="/:id" render={({ match }) => <RigPreview />} />
     </main>
   );

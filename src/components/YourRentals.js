@@ -1,7 +1,7 @@
 import React from "react";
 import "./YourRentals.css";
 
-function YourRentals() {
+function YourRentals({ rentedRigs }) {
   return (
     <section className="yourRentalsSections">
       <p>All your current rentals can be found below:</p>

@@ -2,7 +2,7 @@ import React from "react";
 import RentARig from "./RentARig";
 import "./Home.css";
 
-function Home({ allRigs }) {
+function Home({ availableRigs }) {
   return (
     <section>
       <img
@@ -10,7 +10,7 @@ function Home({ allRigs }) {
         src={require("../assets/photos/Rafting-4.png")}
         alt="Three people rafting in a blue boat with the trees and mountains behind them"
       />
-      <RentARig allRigs={allRigs} />
+      <RentARig availableRigs={availableRigs} />
     </section>
   );
 }
