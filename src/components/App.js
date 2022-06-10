@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
+import About from "./About";
+import NoMatch from "./NoMatch";
 import YourRentals from "./YourRentals";
 import RigPreview from "./RigPreview";
 import "./App.css";
@@ -27,23 +29,27 @@ function App() {
   return (
     <main>
       <Nav />
-      <Route
-        exact
-        path="/"
-        render={() => <Home availableRigs={availableRigs} />}
-      />
-      <Route
-        exact
-        path="/your-rentals"
-        render={() => <YourRentals rentedRigs={rentedRigs} />}
-      />
-      <Route
-        exact
-        path="/:id"
-        render={({ match }) => (
-          <RigPreview currentRig={findRig(match.params.id)} />
-        )}
-      />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => <Home availableRigs={availableRigs} />}
+        />
+        <Route
+          exact
+          path="/your-rentals"
+          render={() => <YourRentals rentedRigs={rentedRigs} />}
+        />
+        <Route exact path="/about" render={() => <About />} />
+        <Route
+          path="/raft/:id"
+          render={({ match }) => (
+            <RigPreview currentRig={findRig(match.params.id)} />
+          )}
+        />
+        <Route path="/404" render={() => <NoMatch />} />
+        <Redirect to="/404" />
+      </Switch>
     </main>
   );
 }

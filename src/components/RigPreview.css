@@ -5,5 +5,18 @@
 }
 
 .rigImage {
-  width: 50vw
+  width: 40vw
+}
+
+.rentBtn {
+  background-color: white;
+  border-color: #22AEF4;
+  border-style: solid;
+  width: 15%;
+  border-radius: 5px;
+}
+
+.rentBtn:hover {
+  background-color: #22AEF4;
+  color: white;
 }

@@ -4,7 +4,7 @@ import "./RigCard.css";
 
 function RigCard({ id, name, brand, type, cost, photo }) {
   return (
-    <Link to={`/${id}`} style={{ textDecoration: "none" }}>
+    <Link to={`/raft/${id}`} style={{ textDecoration: "none" }}>
       <section className="rigCard">
         <img
           className="cardImage"

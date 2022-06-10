@@ -12,7 +12,9 @@ function RigPreview({ currentRig }) {
       />
       <p>{`${currentRig.description}`}</p>
       <h3>{`$${currentRig.cost} per day`}</h3>
-      {currentRig.status === "available" && <button>Rent</button>}
+      {currentRig.status === "available" && (
+        <button className="rentBtn">Rent</button>
+      )}
       {currentRig.status === "rented" && (
         <p>You are currently renting this raft</p>
       )}
