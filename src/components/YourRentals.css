@@ -1,0 +1,14 @@
+.yourRentalsSections {
+  padding: 5%;
+  padding-top: 10%;
+  height: 90vh;
+}
+
+.yourRentals {
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
