@@ -18,6 +18,12 @@ function App() {
     return rig.status === "rented";
   });
 
+  const findRig = (id) => {
+    return allBoatData.find((rig) => {
+      return rig.id === Number(id);
+    });
+  };
+
   return (
     <main>
       <Nav />
@@ -31,7 +37,13 @@ function App() {
         path="/your-rentals"
         render={() => <YourRentals rentedRigs={rentedRigs} />}
       />
-      <Route exact path="/:id" render={({ match }) => <RigPreview />} />
+      <Route
+        exact
+        path="/:id"
+        render={({ match }) => (
+          <RigPreview currentRig={findRig(match.params.id)} />
+        )}
+      />
     </main>
   );
 }

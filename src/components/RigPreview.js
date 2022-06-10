@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import "./RigPreview.css";
 
-function RigPreview() {
-  return <section>{/* <h1>Rig Preview</h1> */}</section>;
+function RigPreview({ currentRig }) {
+  return (
+    <section className="rigPreviewSection">
+      <h1>{currentRig.name}</h1>
+      <p>{`${currentRig.brand} | ${currentRig.type}`}</p>
+      <img
+        className="rigImage"
+        src={require(`../assets/boatImages/${currentRig.photoId}`)}
+      />
+      <p>{`${currentRig.description}`}</p>
+      <h3>{`$${currentRig.cost} per day`}</h3>
+      {currentRig.status === "available" && <button>Rent</button>}
+      {currentRig.status === "rented" && (
+        <p>You are currently renting this raft</p>
+      )}
+    </section>
+  );
 }
 
 export default RigPreview;

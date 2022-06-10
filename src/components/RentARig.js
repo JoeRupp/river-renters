@@ -6,7 +6,7 @@ function RentARig({ availableRigs }) {
   const [rigSelection, setRigSelection] = useState(availableRigs);
   const [brandValue, setBrandValue] = useState("brand");
   const [typeValue, setTypeValue] = useState("type");
-  const [priceValue, setPriceValue] = useState([]);
+  const [priceValue, setPriceValue] = useState("price");
 
   const handleBrandChange = (event) => {
     setBrandValue(event.target.value);
@@ -17,7 +17,11 @@ function RentARig({ availableRigs }) {
   };
 
   const handlePriceChange = (event) => {
-    setPriceValue(event.target.value.split(","));
+    if (event.target.value === "price") {
+      setPriceValue(event.target.value);
+    } else {
+      setPriceValue(event.target.value.split(","));
+    }
   };
 
   const filterRigs = () => {
