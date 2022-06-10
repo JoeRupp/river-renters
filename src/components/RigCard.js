@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./RigCard.css";
 
-function RigCard({ id, name, brand, type, cost, description, photo }) {
+function RigCard({ id, name, brand, type, cost, photo }) {
   return (
     <Link to={`/${id}`} style={{ textDecoration: "none" }}>
       <section className="rigCard">

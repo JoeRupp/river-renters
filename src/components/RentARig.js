@@ -6,7 +6,7 @@ function RentARig({ availableRigs }) {
   const [rigSelection, setRigSelection] = useState(availableRigs);
   const [brandValue, setBrandValue] = useState("brand");
   const [typeValue, setTypeValue] = useState("type");
-  const [priceValue, setPriceValue] = useState("price");
+  const [priceValue, setPriceValue] = useState([]);
 
   const handleBrandChange = (event) => {
     setBrandValue(event.target.value);
@@ -17,7 +17,7 @@ function RentARig({ availableRigs }) {
   };
 
   const handlePriceChange = (event) => {
-    setPriceValue(event.target.value);
+    setPriceValue(event.target.value.split(","));
   };
 
   const filterRigs = () => {
@@ -37,7 +37,9 @@ function RentARig({ availableRigs }) {
 
     if (priceValue !== "price") {
       filteredRigs = filteredRigs.filter((rig) => {
-        return rig.price === brandValue;
+        return (
+          Number(priceValue[0]) <= rig.cost && rig.cost <= Number(priceValue[1])
+        );
       });
     }
 
@@ -95,10 +97,10 @@ function RentARig({ availableRigs }) {
           </select>
           <select value={priceValue} onChange={handlePriceChange}>
             <option value="price">price</option>
-            <option value="199">$0 - $199</option>
-            <option value="100 - 149">$100 - $149</option>
-            <option value="150 - 199">$150 - $199</option>
-            <option value="200">$200 +</option>
+            <option value="0, 99">$0 - $99</option>
+            <option value="100, 149">$100 - $149</option>
+            <option value="150, 199">$150 - $199</option>
+            <option value="200, 1000">$200 +</option>
           </select>
           <button className="filterBtn" onClick={() => filterRigs()}>
             filter
