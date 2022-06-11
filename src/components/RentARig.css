@@ -53,7 +53,6 @@ select {
 
 .availableRentals{
   width: 90vw;
-  height: 40vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
