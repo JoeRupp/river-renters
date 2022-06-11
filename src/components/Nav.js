@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
   const [rentARigStatus, updateRentARigStatus] = useState(false);
   const [yourRentalsStatus, updateRentalStatus] = useState(false);
+  const [aboutStatus, updateAboutStatus] = useState(false);
 
   return (
     <nav className="navigationBar">
@@ -31,6 +32,13 @@ function Nav() {
           <button className={yourRentalsStatus ? "btnActive" : "btn"}>
             YOUR RENTALS
           </button>
+        </NavLink>
+        <NavLink
+          exact
+          to={"/about"}
+          className={(isActive) => updateAboutStatus(isActive)}
+        >
+          <button className={aboutStatus ? "btnActive" : "btn"}>ABOUT</button>
         </NavLink>
       </div>
     </nav>

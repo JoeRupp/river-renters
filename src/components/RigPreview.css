@@ -1,0 +1,33 @@
+.rigPreviewSection {
+  padding: 10%;
+  height: 80vh;
+}
+
+.rigImage {
+  width: 50%;
+}
+
+.raftInfoContainer {
+  display: flex;
+}
+
+.raftDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30vw;
+  margin-left: 10%;
+}
+
+.rentBtn {
+  background-color: white;
+  border-color: #22AEF4;
+  border-style: solid;
+  width: 15%;
+  border-radius: 5px;
+}
+
+.rentBtn:hover {
+  background-color: #22AEF4;
+  color: white;
+}

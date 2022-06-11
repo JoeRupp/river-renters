@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
+import About from "./About";
+import NoMatch from "./NoMatch";
 import YourRentals from "./YourRentals";
 import RigPreview from "./RigPreview";
 import "./App.css";
@@ -9,6 +11,22 @@ import allBoats from "../testData";
 
 function App() {
   const [allBoatData, setAllBoatData] = useState(allBoats.rigs);
+
+  const rentBoat = (boatId) => {
+    console.log(boatId);
+
+    const newBoatList = allBoatData.reduce((boatList, rig) => {
+      if (rig.id === boatId) {
+        rig.status = "rented";
+        boatList.push(rig);
+      } else {
+        boatList.push(rig);
+      }
+      return boatList;
+    }, []);
+
+    setAllBoatData(newBoatList);
+  };
 
   const availableRigs = allBoatData.filter((rig) => {
     return rig.status === "available";
@@ -18,20 +36,39 @@ function App() {
     return rig.status === "rented";
   });
 
+  const findRig = (id) => {
+    return allBoatData.find((rig) => {
+      return rig.id === Number(id);
+    });
+  };
+
   return (
     <main>
       <Nav />
-      <Route
-        exact
-        path="/"
-        render={() => <Home availableRigs={availableRigs} />}
-      />
-      <Route
-        exact
-        path="/your-rentals"
-        render={() => <YourRentals rentedRigs={rentedRigs} />}
-      />
-      <Route exact path="/:id" render={({ match }) => <RigPreview />} />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => <Home availableRigs={availableRigs} />}
+        />
+        <Route
+          exact
+          path="/your-rentals"
+          render={() => <YourRentals rentedRigs={rentedRigs} />}
+        />
+        <Route exact path="/about" render={() => <About />} />
+        <Route
+          path="/raft/:id"
+          render={({ match }) => (
+            <RigPreview
+              currentRig={findRig(match.params.id)}
+              rentBoat={rentBoat}
+            />
+          )}
+        />
+        <Route path="/404" render={() => <NoMatch />} />
+        <Redirect to="/404" />
+      </Switch>
     </main>
   );
 }
