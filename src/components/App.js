@@ -12,6 +12,22 @@ import allBoats from "../testData";
 function App() {
   const [allBoatData, setAllBoatData] = useState(allBoats.rigs);
 
+  const rentBoat = (boatId) => {
+    console.log(boatId);
+
+    const newBoatList = allBoatData.reduce((boatList, rig) => {
+      if (rig.id === boatId) {
+        rig.status = "rented";
+        boatList.push(rig);
+      } else {
+        boatList.push(rig);
+      }
+      return boatList;
+    }, []);
+
+    setAllBoatData(newBoatList);
+  };
+
   const availableRigs = allBoatData.filter((rig) => {
     return rig.status === "available";
   });
@@ -44,7 +60,10 @@ function App() {
         <Route
           path="/raft/:id"
           render={({ match }) => (
-            <RigPreview currentRig={findRig(match.params.id)} />
+            <RigPreview
+              currentRig={findRig(match.params.id)}
+              rentBoat={rentBoat}
+            />
           )}
         />
         <Route path="/404" render={() => <NoMatch />} />

@@ -6,7 +6,7 @@ function NoMatch() {
     <section>
       <img
         className="homeImage"
-        src={require("../assets/photos/Rafting-1.png")}
+        src={require("../assets/photos/Rafting404Error.png")}
         alt="Three people rafting in a blue boat with the trees and mountains behind them"
       />
     </section>
