@@ -5,10 +5,22 @@
 }
 
 .yourRentals {
-  height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-items: center;
   align-items: center;
 }
+
+@media screen and (max-width: 60em) {
+  .yourRentalsSections {
+    padding: 5%;
+    padding-top: 20%;
+  }
+} 
+
+@media screen and (max-width: 40em) {
+  .yourRentalsSections {
+    padding-top: 25%;
+  }
+} 

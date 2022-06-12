@@ -4,7 +4,7 @@ import "./About.css";
 function About() {
   return (
     <section className="wrapper">
-      <div classname="section parallax bg1">
+      <div className="section parallax bg1">
         <img
           className="aboutImage"
           src={require("../assets/photos/Rafting-5.png")}
@@ -12,7 +12,7 @@ function About() {
         />
         <h1 className="catchPhrase">WE HELP YOU GET OUT THERE</h1>
       </div>
-      <div classname="section static">
+      <div className="section static">
         <p>
           We help you get out there and experience the world. Our rafts start
           with the demands of the river culture, and we use technical materials,
@@ -20,7 +20,7 @@ function About() {
           we get out there - whatever the weather.
         </p>
       </div>
-      <div classname="section parallax bg2">
+      <div className="section parallax bg2">
         <h1>SO GET OUT THERE!</h1>
       </div>
     </section>

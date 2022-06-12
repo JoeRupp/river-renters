@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./RigPreview.css";
 
-function RigPreview({ currentRig, rentBoat }) {
+function RigPreview({ currentRig, rentBoat, returnBoat }) {
   return (
     <section className="rigPreviewSection">
       <h1>{currentRig.name}</h1>
@@ -26,7 +26,17 @@ function RigPreview({ currentRig, rentBoat }) {
             </Link>
           )}
           {currentRig.status === "rented" && (
-            <p>You are currently renting this raft</p>
+            <>
+              <p>You are currently renting this raft</p>
+              <Link to={`/your-rentals`}>
+                <button
+                  className="rentBtn"
+                  onClick={() => returnBoat(currentRig.id)}
+                >
+                  Return
+                </button>
+              </Link>
+            </>
           )}
         </div>
       </div>

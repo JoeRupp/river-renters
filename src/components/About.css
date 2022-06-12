@@ -1,3 +1,11 @@
 .aboutImage {
   width: 100vw;
 }
+
+@media screen and (max-width: 70em) {
+
+} 
+
+@media screen and (max-width: 40em) {
+
+} 

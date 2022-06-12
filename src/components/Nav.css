@@ -56,3 +56,14 @@
 .selectedBtn {
   color: #22AEF4;
 }
+
+@media screen and (max-width: 70em) {
+  .btnContainer {
+    justify-content: space-evenly;
+    width: 100%
+  }
+} 
+
+@media screen and (max-width: 40em) {
+
+} 
