@@ -8,6 +8,7 @@ function RigCard({ id, name, brand, type, cost, photo }) {
     <Link to={`/raft/${id}`} style={{ textDecoration: "none" }}>
       <section className="rigCard">
         <img
+          alt="white water raft"
           className="cardImage"
           src={require(`../assets/boatImages/${photo}`)}
         />

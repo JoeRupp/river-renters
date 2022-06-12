@@ -1,0 +1,64 @@
+{
+  "rigs": [
+    {
+      "id": 1,
+      "status": "available",
+      "name": "NRS Expedition-136 - fully rigged",
+      "brand": "NRS",
+      "type": "Multi-day",
+      "cost": 195,
+      "rentStartDate": "0",
+      "rentEndDate": "0",
+      "description": "The 13 ft 6in NRS E-136 plays like a 13' boat and works like a 14' boat. Its aggressive rocker and wide stance make it fun but dependable in the rapids. Great for fishing, overnights and just seeking thrills.",
+      "photoId": "rigs-NRS-4.png"
+    },
+    {
+      "id": 2,
+      "status": "available",
+      "name": "RMR PK-134 - partially rigged",
+      "brand": "RMR",
+      "type": "Multi-day",
+      "cost": 175,
+      "rentStartDate": "0",
+      "rentEndDate": "0",
+      "description": "Introducing RMR's series of lightweight, plug n' play frame packages. The Rocky Mountain Raft 13' 3-Bay Raft Frame Package for the SB-130 comes with EVERYTHING you need to hit the river in style.",
+      "photoId": "rigs-RMR-6.png"
+    },
+    {
+      "id": 3,
+      "status": "available",
+      "name": "Hyside Outfitter 14.0 - partially rigged",
+      "brand": "Hyside",
+      "type": "Overnight",
+      "cost": 190,
+      "rentStartDate": "0",
+      "rentEndDate": "0",
+      "description": "For the longest time a 14 ft has always been the all around boat. Great for high water, yet floats you over the rocks when the water drops. Lots of leg room to paddle and ample room for a rowing rig.",
+      "photoId": "rigs-Hyside-10.png"
+    },
+    {
+      "id": 4,
+      "status": "available",
+      "name": "10.5 RMR Storm 3-Bay Frame - fully rigged",
+      "brand": "RMR",
+      "type": "Fishing",
+      "cost": 125,
+      "rentStartDate": "0",
+      "rentEndDate": "0",
+      "description": "Introducing RMR's series of lightweight, plug n' play frame packages. The RMR Storm 3-Bay Frame with Poly Deck Package comes with EVERYTHING you need to hit the river in style. Choose your color of our Storm - and leave the rest to us. Our RMR Frame is hand-crafted in Fayette County, WV. The RMR 3-Bay Frame with Poly Deck uses 1-1/4 ft Schedule 40 6063 T6 anodized aluminum with Hollaender Speed Rail Fittings and includes a kick bar, custom oar towers, high-density (HDPE) poly deck, and (4) 1' cam straps. Add in Sawyer components and you have everything you need for the ultimate rowing machine!",
+      "photoId": "rigs-RMR-7.png"
+    },
+    {
+      "id": 5,
+      "status": "available",
+      "name": "Maravia 14X24 Cataraft - fully rigged",
+      "brand": "Maravia",
+      "type": "Multi-day",
+      "cost": 215,
+      "rentStartDate": "0",
+      "rentEndDate": "0",
+      "description": "Smooth curved bow and stern profiles on this highly maneuverable cataraft cut the water more like a hard hull and gives better handling characteristics.",
+      "photoId": "rigs-Maravia-6.png"
+    }
+  ]
+}
