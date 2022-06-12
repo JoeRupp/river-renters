@@ -31,6 +31,20 @@ function App() {
     setAllBoatData(newBoatList);
   };
 
+  const returnBoat = (boatId) => {
+    const newBoatList = allBoatData.reduce((boatList, rig) => {
+      if (rig.id === boatId) {
+        rig.status = "available";
+        boatList.push(rig);
+      } else {
+        boatList.push(rig);
+      }
+      return boatList;
+    }, []);
+
+    setAllBoatData(newBoatList);
+  };
+
   const availableRigs = () =>
     allBoatData.filter((rig) => {
       return rig.status === "available";
@@ -69,6 +83,7 @@ function App() {
               <RigPreview
                 currentRig={findRig(match.params.id)}
                 rentBoat={rentBoat}
+                returnBoat={returnBoat}
               />
             )}
           />
