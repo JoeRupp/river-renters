@@ -1,3 +1,6 @@
+let myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
 const apiCalls = {
   getRigsList: () => {
     return fetch("https://river-renters-api.herokuapp.com/api/v1/rigs")
@@ -27,17 +30,17 @@ const apiCalls = {
       });
   },
 
-  // updateRig: (patch, rigId) => {
-  //   return fetch(
-  //     `https://river-renters-api.herokuapp.com/api/v1/rigs/${rigId}`,
-  //     {
-  //       method: "PATCH",
-  //       headers: myHeaders,
-  //       body: JSON.stringify(patch),
-  //       redirect: "follow",
-  //     }
-  //   ).then((res) => res.text());
-  // },
+  updateRig: (patch, rigId) => {
+    return fetch(
+      `https://river-renters-api.herokuapp.com/api/v1/rigs/${rigId}`,
+      {
+        method: "PATCH",
+        headers: myHeaders,
+        body: JSON.stringify(patch),
+        redirect: "follow",
+      }
+    ).then((res) => res.text());
+  },
 };
 
 export default apiCalls;

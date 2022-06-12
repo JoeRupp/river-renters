@@ -6,6 +6,7 @@ import About from "./About";
 import NoMatch from "./NoMatch";
 import YourRentals from "./YourRentals";
 import RigPreview from "./RigPreview";
+import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 import apiCalls from "../apiCalls";
 
@@ -49,30 +50,32 @@ function App() {
   return (
     <main>
       <Nav />
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={() => <Home availableRigs={availableRigs()} />}
-        />
-        <Route
-          exact
-          path="/your-rentals"
-          render={() => <YourRentals rentedRigs={rentedRigs()} />}
-        />
-        <Route exact path="/about" render={() => <About />} />
-        <Route
-          path="/raft/:id"
-          render={({ match }) => (
-            <RigPreview
-              currentRig={findRig(match.params.id)}
-              rentBoat={rentBoat}
-            />
-          )}
-        />
-        <Route path="/404" render={() => <NoMatch />} />
-        <Redirect to="/404" />
-      </Switch>
+      <ScrollToTop>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => <Home availableRigs={availableRigs()} />}
+          />
+          <Route
+            exact
+            path="/your-rentals"
+            render={() => <YourRentals rentedRigs={rentedRigs()} />}
+          />
+          <Route exact path="/about" render={() => <About />} />
+          <Route
+            path="/raft/:id"
+            render={({ match }) => (
+              <RigPreview
+                currentRig={findRig(match.params.id)}
+                rentBoat={rentBoat}
+              />
+            )}
+          />
+          <Route path="/404" render={() => <NoMatch />} />
+          <Redirect to="/404" />
+        </Switch>
+      </ScrollToTop>
     </main>
   );
 }
