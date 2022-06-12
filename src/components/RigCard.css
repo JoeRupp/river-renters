@@ -37,3 +37,30 @@ h3 {
   color: gray;
   margin: 0;
 }
+
+@media screen and (max-width: 73em) {
+  .rigCard {
+    height: 60vh;
+    width: 40vw;
+    flex-direction: column;
+  }
+
+  .cardImage {
+    height: 50%;
+    margin: 5%;
+  }
+
+  .cardDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+} 
+
+@media screen and (max-width: 45em) {
+  .rigCard {
+    height: 60vh;
+    width: 80vw;
+  }
+} 
