@@ -28,6 +28,14 @@ function App() {
       return boatList;
     }, []);
 
+    const patch = {
+      status: "rented",
+      rentStartDate: "0",
+      rentEndDate: "0",
+    };
+
+    apiCalls.updateRig(patch, boatId);
+
     setAllBoatData(newBoatList);
   };
 
@@ -41,6 +49,14 @@ function App() {
       }
       return boatList;
     }, []);
+
+    const patch = {
+      status: "available",
+      rentStartDate: "0",
+      rentEndDate: "0",
+    };
+
+    apiCalls.updateRig(patch, boatId);
 
     setAllBoatData(newBoatList);
   };
