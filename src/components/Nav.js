@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
@@ -46,3 +46,9 @@ function Nav() {
 }
 
 export default Nav;
+
+Nav.defaultProps = {
+  rentARigStatus: false,
+  yourRentalsStatus: false,
+  aboutStatus: false,
+};

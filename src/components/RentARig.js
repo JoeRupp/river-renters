@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./RentARig.css";
 import RigCard from "./RigCard";
+import PropTypes from "prop-types";
 
 function RentARig({ availableRigs }) {
   const [rigSelection, setRigSelection] = useState(availableRigs);
@@ -121,3 +122,16 @@ function RentARig({ availableRigs }) {
 }
 
 export default RentARig;
+
+RentARig.propTypes = {
+  availableRigs: PropTypes.array.isRequired,
+  rigSelection: PropTypes.array,
+  event: PropTypes.object,
+  rigsList: PropTypes.arrayOf(PropTypes.object),
+};
+
+RentARig.defaultProps = {
+  brandValue: "brand",
+  typeValue: "type",
+  priceValue: "price",
+};

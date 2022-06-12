@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./RigPreview.css";
 
@@ -9,6 +9,7 @@ function RigPreview({ currentRig, rentBoat, returnBoat }) {
       <p>{`${currentRig.brand} | ${currentRig.type}`}</p>
       <div className="raftInfoContainer">
         <img
+          alt="white water raft"
           className="rigImage"
           src={require(`../assets/boatImages/${currentRig.photoId}`)}
         />
