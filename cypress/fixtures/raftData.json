@@ -59,6 +59,18 @@
       "rentEndDate": "0",
       "description": "Smooth curved bow and stern profiles on this highly maneuverable cataraft cut the water more like a hard hull and gives better handling characteristics.",
       "photoId": "rigs-Maravia-6.png"
+    },
+    {
+      "id": 6,
+      "status": "rented",
+      "name": "Maravia 14X24 Cataraft - fully rigged",
+      "brand": "Maravia",
+      "type": "Multi-day",
+      "cost": 215,
+      "rentStartDate": "0",
+      "rentEndDate": "0",
+      "description": "Smooth curved bow and stern profiles on this highly maneuverable cataraft cut the water more like a hard hull and gives better handling characteristics.",
+      "photoId": "rigs-Maravia-6.png"
     }
   ]
 }
