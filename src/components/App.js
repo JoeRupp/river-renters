@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
@@ -7,14 +7,16 @@ import NoMatch from "./NoMatch";
 import YourRentals from "./YourRentals";
 import RigPreview from "./RigPreview";
 import "./App.css";
-import allBoats from "../testData";
+import apiCalls from "../apiCalls";
 
 function App() {
-  const [allBoatData, setAllBoatData] = useState(allBoats.rigs);
+  const [allBoatData, setAllBoatData] = useState([]);
+
+  useEffect(() => {
+    apiCalls.getRigsList().then((data) => setAllBoatData(data.rigs));
+  }, []);
 
   const rentBoat = (boatId) => {
-    console.log(boatId);
-
     const newBoatList = allBoatData.reduce((boatList, rig) => {
       if (rig.id === boatId) {
         rig.status = "rented";
@@ -28,13 +30,15 @@ function App() {
     setAllBoatData(newBoatList);
   };
 
-  const availableRigs = allBoatData.filter((rig) => {
-    return rig.status === "available";
-  });
+  const availableRigs = () =>
+    allBoatData.filter((rig) => {
+      return rig.status === "available";
+    });
 
-  const rentedRigs = allBoatData.filter((rig) => {
-    return rig.status === "rented";
-  });
+  const rentedRigs = () =>
+    allBoatData.filter((rig) => {
+      return rig.status === "rented";
+    });
 
   const findRig = (id) => {
     return allBoatData.find((rig) => {
@@ -49,12 +53,12 @@ function App() {
         <Route
           exact
           path="/"
-          render={() => <Home availableRigs={availableRigs} />}
+          render={() => <Home availableRigs={availableRigs()} />}
         />
         <Route
           exact
           path="/your-rentals"
-          render={() => <YourRentals rentedRigs={rentedRigs} />}
+          render={() => <YourRentals rentedRigs={rentedRigs()} />}
         />
         <Route exact path="/about" render={() => <About />} />
         <Route

@@ -8,6 +8,10 @@ function RentARig({ availableRigs }) {
   const [typeValue, setTypeValue] = useState("type");
   const [priceValue, setPriceValue] = useState("price");
 
+  useEffect(() => {
+    setRigSelection(availableRigs);
+  }, [availableRigs]);
+
   const handleBrandChange = (event) => {
     setBrandValue(event.target.value);
   };
