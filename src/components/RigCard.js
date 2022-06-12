@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./RigCard.css";
+import PropTypes from "prop-types";
 
 function RigCard({ id, name, brand, type, cost, photo }) {
   return (
@@ -21,3 +22,12 @@ function RigCard({ id, name, brand, type, cost, photo }) {
 }
 
 export default RigCard;
+
+RigCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  cost: PropTypes.number.isRequired,
+  photo: PropTypes.string.isRequired,
+};

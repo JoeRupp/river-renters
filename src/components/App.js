@@ -9,6 +9,7 @@ import RigPreview from "./RigPreview";
 import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 import apiCalls from "../apiCalls";
+import PropTypes from "prop-types";
 
 function App() {
   const [allBoatData, setAllBoatData] = useState([]);
@@ -112,3 +113,16 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  allBoatData: PropTypes.array,
+  data: PropTypes.object,
+  boatId: PropTypes.number,
+  patch: PropTypes.object,
+  id: PropTypes.number,
+  availableRigs: PropTypes.array,
+  rentedRigs: PropTypes.array,
+  currentRig: PropTypes.object,
+  rentBoat: PropTypes.func,
+  returnBoat: PropTypes.func,
+};

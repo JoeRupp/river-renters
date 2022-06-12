@@ -1,6 +1,7 @@
 import React from "react";
 import RentARig from "./RentARig";
 import "./Home.css";
+import PropTypes from "prop-types";
 
 function Home({ availableRigs }) {
   return (
@@ -16,3 +17,7 @@ function Home({ availableRigs }) {
 }
 
 export default Home;
+
+Home.propTypes = {
+  availableRigs: PropTypes.array.isRequired,
+};

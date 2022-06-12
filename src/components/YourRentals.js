@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./YourRentals.css";
 import RigCard from "./RigCard";
+import PropTypes from "prop-types";
 
 function YourRentals({ rentedRigs }) {
-  const [yourRentals, setYourRentals] = useState(rentedRigs);
-
   const yourRentalsList = (rigsList) => {
     if (rigsList.length) {
       return rigsList.map((rig) => {
@@ -28,9 +27,14 @@ function YourRentals({ rentedRigs }) {
   return (
     <section className="yourRentalsSections">
       <p>All your current rentals can be found below:</p>
-      <div className="yourRentals">{yourRentalsList(yourRentals)}</div>
+      <div className="yourRentals">{yourRentalsList(rentedRigs)}</div>
     </section>
   );
 }
 
 export default YourRentals;
+
+YourRentals.propTypes = {
+  rentedRigs: PropTypes.array.isRequired,
+  rigsList: PropTypes.array,
+};
