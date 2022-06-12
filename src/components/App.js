@@ -7,7 +7,6 @@ import NoMatch from "./NoMatch";
 import YourRentals from "./YourRentals";
 import RigPreview from "./RigPreview";
 import ScrollToTop from "./ScrollToTop";
-import "./App.css";
 import apiCalls from "../apiCalls";
 import PropTypes from "prop-types";
 

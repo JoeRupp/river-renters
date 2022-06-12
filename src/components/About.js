@@ -13,7 +13,6 @@ function About() {
         <div className="headLineContainer">
           <h1 className="headLine">WE HELP YOU GET OUT THERE.</h1>
         </div>
-
         <p>
           The world of white water rafting is difficult to get into. Gear is
           expensive, going with a company on a guided trip is expensive, and
