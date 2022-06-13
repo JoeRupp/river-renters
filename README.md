@@ -6,7 +6,7 @@ River Renters is a white water rafting rental site. This application is a solo p
 
 The world of white water rafting is difficult to get into. Gear is expensive, going with a company on a guided trip is expensive, and permits for a river trip take a tremendous amount of luck. You either need to know someone or have time/money. River Renters seeks to solve some these problems by providing folks a way to rent fully rigger (or partially rigged) rafts - helping to lower the barrier to entry so more people can get out there.
 
-[Deployed app]()
+[Deployed app](https://river-renters.herokuapp.com/)
 
 [River Renters API](https://github.com/JoeRupp/river-renters-api)
 
@@ -15,6 +15,16 @@ The world of white water rafting is difficult to get into. Gear is expensive, go
 [Project planning documents](https://xd.adobe.com/view/8f257575-40ae-4a61-b658-fc1928bb8389-da76/)
 
 ## Application in Action:
+
+![home page]()
+
+![filtering]()
+
+![renting a boat]()
+
+![preview a boat]()
+
+![about page]()
 
 ## Set Up:
 
