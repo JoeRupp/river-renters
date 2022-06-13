@@ -2,10 +2,54 @@
   width: 100vw;
 }
 
-@media screen and (max-width: 70em) {
+.aboutSection {
+  padding: 5%;
+}
 
+.headLineContainer {
+  width:50%;
+}
+
+.headLine {
+  font-size: 5em;
+}
+
+.iconContainer {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.riverRentersLogoTwo {
+  width: 25vw;
+}
+
+.boatIcon {
+  width: 10vw;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 70em) {
+  .headLine {
+    font-size: 3em;
+  }
+
+  .riverRentersLogoTwo {
+    width: 35vw;
+  }
+  
+  .boatIcon {
+    width: 15vw;
+    margin-right: 10%;
+  }
 } 
 
 @media screen and (max-width: 40em) {
+  .headLineContainer {
+    width: 75%;
+  }
 
+  .headLine {
+    font-size: 2em;
+  }
 } 
