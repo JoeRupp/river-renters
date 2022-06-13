@@ -14,17 +14,17 @@ The world of white water rafting is difficult to get into. Gear is expensive, go
 
 [Project planning documents](https://xd.adobe.com/view/8f257575-40ae-4a61-b658-fc1928bb8389-da76/)
 
-## Application in Action:
+![Screen Shot 2022-06-12 at 8 38 26 PM](https://user-images.githubusercontent.com/96392562/173269925-a05cbcb5-484f-4e9b-8fdd-26512d9ef50b.png)
 
-![home page]()
+![Screen Shot 2022-06-12 at 8 38 49 PM](https://user-images.githubusercontent.com/96392562/173269936-612a1269-3663-4eca-8259-9d2fbf1cf0bb.png)
 
-![filtering]()
+![Screen Shot 2022-06-12 at 8 39 02 PM](https://user-images.githubusercontent.com/96392562/173269943-80152aac-30a3-418a-995b-30db9a3d3280.png)
 
-![renting a boat]()
+![Screen Shot 2022-06-12 at 8 39 27 PM](https://user-images.githubusercontent.com/96392562/173269953-8e74449a-c872-4468-becf-6815e5d6ec47.png)
 
-![preview a boat]()
+![Screen Shot 2022-06-12 at 8 39 53 PM](https://user-images.githubusercontent.com/96392562/173269963-9862cd82-902c-405e-948b-ba31d44b950e.png)
 
-![about page]()
+![Screen Shot 2022-06-12 at 8 40 05 PM](https://user-images.githubusercontent.com/96392562/173269973-4c509742-7b35-445a-9fee-3b719b785ebd.png)
 
 ## Set Up:
 
