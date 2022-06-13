@@ -4,13 +4,13 @@
 
 River Renters is a white water rafting rental site. This application is a solo project completed during Mod 3 at Turing School of Software & Design that was completed over the duration of 5 days. The main goal of this project was to build a full React application with a front end and back end using various tools like Express, React Router, and Cypress.
 
-The world of white water rafting is difficult to get into. Gear is expensive, going with a company on a guided trip is expensive, and permits for a river trip take a tremendous amount of luck. You either need to know someone or have time/money. River Renters seeks to solve some these problems by providing folks a way to rent fully rigger (or partially rigged) rafts - helping to lower the barrier to entry so more people can get out there.
+The world of white water rafting is difficult to get into. Gear is expensive, going with a company on a guided trip is expensive, and permits for a river trip take a tremendous amount of luck. You either need to know someone or have time/money. River Renters seeks to solve some these problems by providing folks a way to rent fully rigged (or partially rigged) rafts - helping to lower the barrier of entry so more people can get out there.
 
 [Deployed app](https://river-renters.herokuapp.com/)
 
 [River Renters API](https://github.com/JoeRupp/river-renters-api)
 
-[Original project spec can be found here](https://frontend.turing.edu/projects/module-3/showcase.html)
+[Original project spec](https://frontend.turing.edu/projects/module-3/showcase.html)
 
 [Project planning documents](https://xd.adobe.com/view/8f257575-40ae-4a61-b658-fc1928bb8389-da76/)
 
