@@ -14,17 +14,15 @@ The world of white water rafting is difficult to get into. Gear is expensive, go
 
 [Project planning documents](https://xd.adobe.com/view/8f257575-40ae-4a61-b658-fc1928bb8389-da76/)
 
-![Screen Shot 2022-06-12 at 8 38 26 PM](https://user-images.githubusercontent.com/96392562/173269925-a05cbcb5-484f-4e9b-8fdd-26512d9ef50b.png)
+![Jun-12-2022 20-56-41](https://user-images.githubusercontent.com/96392562/173271498-09e848c4-49d3-4d2e-b768-aee402c22d3f.gif)
 
-![Screen Shot 2022-06-12 at 8 38 49 PM](https://user-images.githubusercontent.com/96392562/173269936-612a1269-3663-4eca-8259-9d2fbf1cf0bb.png)
+![Jun-12-2022 20-57-31](https://user-images.githubusercontent.com/96392562/173271605-281f9e61-5e49-4758-a70c-4d7a50e3845f.gif)
 
-![Screen Shot 2022-06-12 at 8 39 02 PM](https://user-images.githubusercontent.com/96392562/173269943-80152aac-30a3-418a-995b-30db9a3d3280.png)
+![Jun-12-2022 20-58-14](https://user-images.githubusercontent.com/96392562/173271653-9648eb51-91bd-49ff-b6e1-081a0e851b4a.gif)
 
-![Screen Shot 2022-06-12 at 8 39 27 PM](https://user-images.githubusercontent.com/96392562/173269953-8e74449a-c872-4468-becf-6815e5d6ec47.png)
+![Jun-12-2022 20-58-48](https://user-images.githubusercontent.com/96392562/173271689-5ff61e17-da5a-487a-b235-13c6afb0e42d.gif)
 
-![Screen Shot 2022-06-12 at 8 39 53 PM](https://user-images.githubusercontent.com/96392562/173269963-9862cd82-902c-405e-948b-ba31d44b950e.png)
-
-![Screen Shot 2022-06-12 at 8 40 05 PM](https://user-images.githubusercontent.com/96392562/173269973-4c509742-7b35-445a-9fee-3b719b785ebd.png)
+![Jun-12-2022 20-59-14](https://user-images.githubusercontent.com/96392562/173271740-7a034d1a-4028-418a-ba98-47f98a3d4a54.gif)
 
 ## Set Up:
 
