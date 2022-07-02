@@ -2,7 +2,7 @@ describe("River Renters rig preview", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://river-renters-api.herokuapp.com/api/v1/rigs", {
       fixture: "./raftData.json",
-    }).visit("https://river-renters-api.herokuapp.com/api/v1/rigs");
+    }).visit("https://river-renters.herokuapp.com/");
     cy.intercept(
       "PATCH",
       "https://river-renters-api.herokuapp.com/api/v1/rigs/1"
@@ -19,9 +19,7 @@ describe("River Renters rig preview", () => {
   });
 
   it("should be able to navigate there from your rentals screen by selecting a rig card", () => {
-    cy.visit(
-      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
-    );
+    cy.visit("https://river-renters.herokuapp.com/your-rentals");
     cy.get(".rigCard").first().click();
     cy.url().should("include", "/raft/6");
   });
@@ -54,9 +52,7 @@ describe("River Renters rig preview", () => {
   });
 
   it("should have a button allowing the user to return the boat and guiding the user to the You Rentals view", () => {
-    cy.visit(
-      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
-    );
+    cy.visit("https://river-renters.herokuapp.com/your-rentals");
     cy.get(".rigCard").first().click();
     cy.get("button").last().click();
     cy.url().should("include", "/your-rentals");

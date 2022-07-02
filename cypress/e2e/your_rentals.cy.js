@@ -2,32 +2,28 @@ describe("River Renters your rentals display", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://river-renters-api.herokuapp.com/api/v1/rigs", {
       fixture: "./raftData.json",
-    }).visit("https://river-renters-api.herokuapp.com/api/v1/rigs");
+    }).visit("https://river-renters.herokuapp.com/");
     cy.intercept(
       "PATCH",
       "https://river-renters-api.herokuapp.com/api/v1/rigs/6"
     );
   });
 
-  it("should be able to navigate to your rentals from the navigation bar", () => {
-    cy.get(".btn").first().click();
-    cy.url().should("include", "/your-rentals");
-    cy.contains("It looks like you don't have any rentals right now!").should(
-      "not.exist"
-    );
-  });
+  // it("should be able to navigate to your rentals from the navigation bar", () => {
+  //   cy.get(".btn").first().click();
+  //   cy.url().should("include", "/your-rentals");
+  //   cy.contains("It looks like you don't have any rentals right now!").should(
+  //     "not.exist"
+  //   );
+  // });
 
   it("should be able to navigate to your rentals with a url", () => {
-    cy.visit(
-      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
-    );
+    cy.visit("https://river-renters.herokuapp.com/your-rentals");
     cy.contains("All your current rentals can be found below:");
   });
 
   it("should display all current rentals", () => {
-    cy.visit(
-      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
-    );
+    cy.visit("https://river-renters.herokuapp.com/your-rentals");
     cy.get(".yourRentals").should("exist");
     cy.get(".rigCard")
       .should("have.length", 1)
@@ -46,9 +42,7 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should show a message saying the user has no rentals if none are populated.", () => {
-    cy.visit(
-      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
-    );
+    cy.visit("https://river-renters.herokuapp.com/your-rentals");
     cy.get(".rigCard").first().click();
     cy.get("button").last().click();
     cy.url().should("include", "/your-rentals");
@@ -57,7 +51,7 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should go a 404 error page if the wrong url is entered", () => {
-    cy.visit("https://river-renters-api.herokuapp.com/api/v1/rigs/kjdjkdsjkd");
+    cy.visit("https://river-renters.herokuapp.com/kjdjkdsjkd");
     cy.get("img")
       .last()
       .should("have.attr", "src")

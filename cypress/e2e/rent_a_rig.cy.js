@@ -2,7 +2,7 @@ describe("River Renters rent a rig display", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://river-renters-api.herokuapp.com/api/v1/rigs", {
       fixture: "./raftData.json",
-    }).visit("https://river-renters-api.herokuapp.com/api/v1/rigs");
+    }).visit("https://river-renters.herokuapp.com/");
   });
 
   it("should display the navigation bar", () => {
@@ -70,7 +70,7 @@ describe("River Renters rent a rig display", () => {
       statusCode: 500,
       fixture: "./raftData.json",
     })
-      .visit("https://river-renters-api.herokuapp.com/api/v1/rigs")
+      .visit("https://river-renters.herokuapp.com/")
       .contains(
         "Oh no! It looks like we don't have any available rigs right now!"
       );
