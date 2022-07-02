@@ -2,7 +2,7 @@ describe("River Renters your rentals display", () => {
   beforeEach(() => {
     cy.intercept("GET", "https://river-renters-api.herokuapp.com/api/v1/rigs", {
       fixture: "./raftData.json",
-    }).visit("http://localhost:3000/");
+    }).visit("https://river-renters-api.herokuapp.com/api/v1/rigs");
     cy.intercept(
       "PATCH",
       "https://river-renters-api.herokuapp.com/api/v1/rigs/6"
@@ -18,12 +18,16 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should be able to navigate to your rentals with a url", () => {
-    cy.visit("http://localhost:3000/your-rentals");
+    cy.visit(
+      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
+    );
     cy.contains("All your current rentals can be found below:");
   });
 
   it("should display all current rentals", () => {
-    cy.visit("http://localhost:3000/your-rentals");
+    cy.visit(
+      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
+    );
     cy.get(".yourRentals").should("exist");
     cy.get(".rigCard")
       .should("have.length", 1)
@@ -42,7 +46,9 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should show a message saying the user has no rentals if none are populated.", () => {
-    cy.visit("http://localhost:3000/your-rentals");
+    cy.visit(
+      "https://river-renters-api.herokuapp.com/api/v1/rigs/your-rentals"
+    );
     cy.get(".rigCard").first().click();
     cy.get("button").last().click();
     cy.url().should("include", "/your-rentals");
@@ -51,7 +57,7 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should go a 404 error page if the wrong url is entered", () => {
-    cy.visit("http://localhost:3000/kjdjkdsjkd");
+    cy.visit("https://river-renters-api.herokuapp.com/api/v1/rigs/kjdjkdsjkd");
     cy.get("img")
       .last()
       .should("have.attr", "src")
