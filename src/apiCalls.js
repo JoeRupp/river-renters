@@ -3,7 +3,7 @@ myHeaders.append("Content-Type", "application/json");
 
 const apiCalls = {
   getRigsList: () => {
-    return fetch("https://river-renters-api.herokuapp.com/api/v1/rigs")
+    return fetch("https://river-renters-api.vercel.app/api/v1/rigs")
       .then((response) => {
         if (!response.ok) {
           throw Error(response.text);
@@ -17,7 +17,7 @@ const apiCalls = {
   },
 
   getRig: (rigId) => {
-    return fetch(`https://river-renters-api.herokuapp.com/api/v1/rigs/${rigId}`)
+    return fetch(`https://river-renters-api.vercel.app/api/v1/rigs/${rigId}`)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.text);
@@ -31,15 +31,12 @@ const apiCalls = {
   },
 
   updateRig: (patch, rigId) => {
-    return fetch(
-      `https://river-renters-api.herokuapp.com/api/v1/rigs/${rigId}`,
-      {
-        method: "PATCH",
-        headers: myHeaders,
-        body: JSON.stringify(patch),
-        redirect: "follow",
-      }
-    ).then((res) => res.text());
+    return fetch(`https://river-renters-api.vercel.app/api/v1/rigs/${rigId}`, {
+      method: "PATCH",
+      headers: myHeaders,
+      body: JSON.stringify(patch),
+      redirect: "follow",
+    }).then((res) => res.text());
   },
 };
 
