@@ -8,7 +8,7 @@ The world of white water rafting is difficult to get into. Gear is expensive, go
 
 ---
 
-[Deployed app](https://river-renters.herokuapp.com/)
+[Deployed app](https://river-renters.vercel.app/)
 
 [River Renters API](https://github.com/JoeRupp/river-renters-api)
 
