@@ -1,12 +1,9 @@
 describe("River Renters your rentals display", () => {
   beforeEach(() => {
-    cy.intercept("GET", "https://river-renters-api.herokuapp.com/api/v1/rigs", {
+    cy.intercept("GET", "https://river-renters-api.vercel.app/api/v1/rigs", {
       fixture: "./raftData.json",
-    }).visit("https://river-renters.herokuapp.com/");
-    cy.intercept(
-      "PATCH",
-      "https://river-renters-api.herokuapp.com/api/v1/rigs/6"
-    );
+    }).visit("https://river-renters.vercel.app/");
+    cy.intercept("PATCH", "https://river-renters-api.vercel.app/api/v1/rigs/6");
   });
 
   // it("should be able to navigate to your rentals from the navigation bar", () => {
@@ -18,12 +15,12 @@ describe("River Renters your rentals display", () => {
   // });
 
   it("should be able to navigate to your rentals with a url", () => {
-    cy.visit("https://river-renters.herokuapp.com/your-rentals");
+    cy.visit("https://river-renters.vercel.app/your-rentals");
     cy.contains("All your current rentals can be found below:");
   });
 
   it("should display all current rentals", () => {
-    cy.visit("https://river-renters.herokuapp.com/your-rentals");
+    cy.visit("https://river-renters.vercel.app/your-rentals");
     cy.get(".yourRentals").should("exist");
     cy.get(".rigCard")
       .should("have.length", 1)
@@ -42,7 +39,7 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should show a message saying the user has no rentals if none are populated.", () => {
-    cy.visit("https://river-renters.herokuapp.com/your-rentals");
+    cy.visit("https://river-renters.vercel.app/your-rentals");
     cy.get(".rigCard").first().click();
     cy.get("button").last().click();
     cy.url().should("include", "/your-rentals");
@@ -51,7 +48,7 @@ describe("River Renters your rentals display", () => {
   });
 
   it("should go a 404 error page if the wrong url is entered", () => {
-    cy.visit("https://river-renters.herokuapp.com/kjdjkdsjkd");
+    cy.visit("https://river-renters.vercel.app/kjdjkdsjkd");
     cy.get("img")
       .last()
       .should("have.attr", "src")

@@ -46,6 +46,10 @@ About page:
 - Run `npm start` to run the application in your browser.
   - If you need to stop running the application, run `control + C`.
 
+Testing:
+
+- Run `npm run cypress` to open the test suite and begin running tests.
+
 ## Goals:
 
 - Implement React Router to handle multiple views and navigation.
@@ -59,6 +63,7 @@ About page:
 - Javascript
 - CSS
 - Cypress
+- CircleCI
 - React Router
 - Express
 - Restful APIs

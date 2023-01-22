@@ -1,8 +1,8 @@
 describe("River Renters about page", () => {
   beforeEach(() => {
-    cy.intercept("GET", "https://river-renters-api.herokuapp.com/api/v1/rigs", {
+    cy.intercept("GET", "https://river-renters-api.vercel.app/api/v1/rigs", {
       fixture: "./raftData.json",
-    }).visit("https://river-renters.herokuapp.com/");
+    }).visit("https://river-renters.vercel.app/");
   });
 
   it("should be able to navigate to the about page from the navigation bar", () => {
@@ -11,7 +11,7 @@ describe("River Renters about page", () => {
   });
 
   it("should be able to navigate to the about page with a url and contains all info", () => {
-    cy.visit("https://river-renters.herokuapp.com/about");
+    cy.visit("https://river-renters.vercel.app/about");
     cy.contains("WE HELP YOU GET OUT THERE.");
     cy.contains(
       "The world of white water rafting is difficult to get into. Gear is expensive, going with a company on a guided trip is expensive, and permits for a river trip take a tremendous amount of luck. You either need to know someone or have time/money. River Renters seeks to solve some these problems by providing folks a way to rent fully rigged (or partially rigged) rafts - helping to lower the barrier of entry so more people can enjoy the sport of rafting."
